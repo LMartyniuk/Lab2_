@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Лабораторна робота №2</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- На макеті ми бачимо 3 рядки, тому три <tr> -->
+	<table border="1">
+		<!-- <tbody> ми використовуємо як обгорту для основного контенту таблиці -->
+		<tbody>
+			<!-- Згідно макету у нас виходить 8 колонок, тому сумма колонок у всіх рядках має бути 8 -->
+			<!-- colspan означає, що ми розширяємо ячейку на дві колонки, тому умовно виходить два <td> -->
+			<!-- rowspan означає, що ми розширяємо ячейку на два рядки, тому умовно виходить два <td> -->
+			<!-- у випадку colspan="2" rowspan="2" ми розширили одну ячейку на дві вниз і дві вправо і в сумі вийшло 4, тобто 2 в нашому рядку і дві в нижньому -->
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td colspan="2" rowspan="2">Кремса</td>
+				<td colspan="2">Станіслав</td>
+				<td colspan="2" rowspan="2">Володимирович</td>
+			</tr>
+			<tr>
+				<!-- в цьому рядку сума <td> на перший погляд 4, але насправді 8, тому що ще 4 рядки спустилися з першого нашого рядку rowspan="2" -->
+				<td colspan="2">ІТ-72</td>
+				<td colspan="2">ЛР Варіант 8</td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+				<td colspan="6">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Обернули два квадрата в один <div> для того, щоб задати йому relative, щоб відносно нього позиціюнувати один з наших квадратів -->
+	<div class="squears">
+		<div class="squear"></div>
+		<div class="squear"></div>
+	</div>
+</body>
+</html>
